@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="assets/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="assets/main.js"></script>
+  <script type="text/javascript" src="assets/pages.js"></script>
+  <script type="text/javascript" src="assets/reviews.js"></script>
+  <script type="text/javascript" src="assets/getSource.js"></script>
+  <link href="assets/main.css" rel="stylesheet" type="text/css">
+  <link href="assets/animation.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+</body>
+<body>
+
+  <div class="hide gray-overlay"></div>
+
+<!-- Home page -->
+
+  <div id="page" class="page">
+    <div id="main-page">
+
+      <section class="header">
+        <img class="logo" src="images/logo.jpg" title="logo">
+        <h1>DOUANE CHECK</h1>
+      </section>
+
+      <section id="inside-eu" class="eu">
+        <div class="icon-wrapper">
+          <img src="images/eu-circle.png">
+          <span>EU</span>
+        </div>
+        <div class="text-wrapper">
+          <span class="title">Webshop uit Europa</span>
+        </div>
+      </section>
+
+      <section id="outside-eu" class="eu hide">
+        <div class="icon-wrapper">
+          <img src="images/eu-circle.png">
+          <span><label>NON</label><br>EU</span>
+        </div>
+        <div class="text-wrapper">
+          <span class="title">Webshop buiten Europa</span>
+        </div>
+      </section>
+
+      <section class="beoordeling">
+        <div class="icon-wrapper">
+          <div class="number">5</div>
+          <img class="stars" src="images/stars.png"/>
+          <div class="stars-back"></div>
+        </div>
+        <div class="text-wrapper">
+          <div class="title"><span id="reviews-amount"></span> beoordelingen</div>
+        </div>
+      </section>
+
+      <section class="berekentool">
+        <div class="icon-wrapper">
+          <img src="images/calculator.png"/>
+          <img class="hide calculator-overlay" src="images/overlay.png">
+        </div>
+        <div class="text-wrapper">
+          <div class="title">Bereken extra kosten</div>
+        </div>
+      </section>
+      <div class="footer">
+        <div class="settings">
+          <img src="images/settings.png">
+          <span>Instellingen</span>
+        </div>
+        <div class="switch">
+          <img src="images/pauze.png">
+          <span>Pauzeer</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+<!-- EU informatie page -->
+
+
+  <div id="eu-information-page" class="page">
+    <section class="header">
+      <img src="images/back.png" class="back-icon">
+      <h2>Binnen of buiten EU</h2>
+    </section>
+
+    <div class="btn" id="more-info">Meer informatie</div> 
+  </div>
+
+<!-- NEW -->
+<!-- EU informatie page -->
+
+
+  <div id="give-review" class="page current">
+    <section class="header">
+      <img src="images/back.png" class="back-icon">
+      <h2>Beoordelen</h2>
+    </section>
+
+    <div class="page-inner">
+      <form>
+        <label for="webshop">Webshop:</label>
+        <input type='text' name='webshop' id='webshop' />
+
+        <label for="vote">Cijfer:</label>
+        <select name='vote' id="vote">
+          <option value='1'>1 sterrentje</option>
+          <option value='2'>2 sterrentjes</option>
+          <option value='3'>3 sterrentjes</option>
+          <option value='4'>4 sterrentjes</option>
+          <option value='5'>5 sterrentjes</option>
+        </select>
+
+        <label for="comment">Beoordeling:</label>
+        <input type='text' name='comment' id='comment' />
+        <input type="submit" class="btn" id="submit" value="Plaats beoordeling">
+      </form>
+    </div>
+
+  </div>
+
+<!-- /NEW -->
+
+
+</body>
+</html>

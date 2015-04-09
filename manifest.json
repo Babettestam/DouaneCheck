@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Test extension",
+  "description": "This extension shows a Google Image search result for the current page",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ],
+  "info_page": "info.html",
+  "background": {
+    "info_page": "info.html"
+  },
+  "info_ui": {
+    "chrome_style": true,
+    "page": "info.html"
+  },
+  "icons": { "16": "icons/icon16.png",
+             "48": "icons/icon48.png",
+            "128": "icons/icon128.png" }
+}
