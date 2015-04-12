@@ -17,7 +17,7 @@
 
 <!-- Home page -->
 
-  <div id="page" class="page">
+  <div id="page" class="page current">
     <div id="main-page">
 
       <section class="header">
@@ -52,7 +52,7 @@
           <div class="stars-back"></div>
         </div>
         <div class="text-wrapper">
-          <div class="title"><span id="reviews-amount"></span> beoordelingen</div>
+          <div class="title"><span id="reviews-amount"></span> beoordeling(en)</div>
         </div>
       </section>
 
@@ -88,15 +88,17 @@
       <img src="images/back.png" class="back-icon">
       <h2>Binnen of buiten EU</h2>
     </section>
-
+      <div class="page-inner">
+        Producten van buiten de EU bestellen op internet? Let op wat u koopt! Meestal moet u belastingen bij invoer (invoerrechten en/of btw en accijns) betalen. Sommige goederen mag u helemaal niet - of alleen met een vergunning - invoeren.
+        </div>
     <div class="btn" id="more-info">Meer informatie</div> 
   </div>
 
 <!-- NEW -->
-<!-- EU informatie page -->
+<!-- Give review page -->
 
 
-  <div id="give-review" class="page current">
+  <div id="give-review" class="page">
     <section class="header">
       <img src="images/back.png" class="back-icon">
       <h2>Beoordelen</h2>
@@ -107,25 +109,179 @@
         <label for="webshop">Webshop:</label>
         <input type='text' name='webshop' id='webshop' />
 
-        <label for="vote">Cijfer:</label>
-        <select name='vote' id="vote">
-          <option value='1'>1 sterrentje</option>
-          <option value='2'>2 sterrentjes</option>
-          <option value='3'>3 sterrentjes</option>
-          <option value='4'>4 sterrentjes</option>
-          <option value='5'>5 sterrentjes</option>
-        </select>
+        <label for="titleV">Title:</label>
+        <input type='text' name='title' id='titleV' />
+
+        <label>Cijfer:</label>
+        <div id="vote">
+          <span data-rate='5'>&#9733;</span>
+          <span data-rate='4'>&#9733;</span>
+          <span data-rate='3'>&#9733;</span>
+          <span data-rate='2'>&#9733;</span>
+          <span data-rate='1'>&#9733;</span>
+        </div>
 
         <label for="comment">Beoordeling:</label>
-        <input type='text' name='comment' id='comment' />
+        <textarea type='text' name='comment' id='comment'></textarea>
         <input type="submit" class="btn" id="submit" value="Plaats beoordeling">
       </form>
     </div>
 
   </div>
 
+
+<!-- Show reviews -->
+
+
+  <div id="show-review" class="page">
+    <section class="header">
+      <img src="images/back.png" class="back-icon">
+      <h2><span id="average"></span>/5<span id="url"></span></h2>
+    </section>
+
+    <div class="page-inner">
+      <div class="reviews-wrapper">
+        <div class="review" id="review1">
+          <div class="title-wrapper">
+            <span class="review_title"></span><span id="stars"></span>
+          </div>
+          <div class="review_content"></div>
+          <div class="bottom_bar">
+            <span class="author"></span><span class="date"></span>
+          </div>
+        </div>
+        <div class="review" id="review2">
+          <div class="title-wrapper">
+            <span class="review_title"></span><span id="stars"></span>
+          </div>
+          <div class="review_content"></div>
+          <div class="bottom_bar">
+            <span class="author"></span><span class="date"></span>
+          </div>
+        </div>
+      </div>
+      <input type="submit" class="btn to-give-review" value="Plaats beoordeling">
+    </div>
+  </div>
+  <!-- Review succes -->
+
+  <div id="review-succes" class="page">
+    <section class="header">
+      <img src="images/back.png" class="back-icon">
+      <h2>Beoordelen</h2>
+    </section>
+
+    <div class="page-inner">
+      <img src="images/pauze.png">
+      <div>Beoordeling succesvol geplaatst</div>
+      <input type="button" class="btn to-home-screen" value="TERUG NAAR BEGINSCHERM"/>
+    </div>
+
+  </div>
 <!-- /NEW -->
 
+
+  <!-- Berekentool page -->
+  <div id="berekentool-page" class="page">
+    <section class="header">
+      <img src="images/back.png" class="back-icon">
+      <h2>Berekening</h2>
+      <p class="bereken-stap"><span>1</span>/2</p>
+    </section>
+   <!-- stap 1 -->
+    <div class="berekentool-content stap1">
+      <div class="berekentool-item">
+        <p class="berekentool-product">IPhone 6</p>
+        <p class="berekentool-price">&euro; 799,02</p>
+        <select class="dropdown">
+          <option>Kies een productgroep</option>
+          <option>Computers en computeronderdelen</option>
+          <option>Speelgoed</option>
+          <option>Telefoontoestellen</option>
+        </select>
+      </div>
+      <div class="berekentool-item">
+        <p class="berekentool-product">HTC One M8</p>
+        <p class="berekentool-price">&euro; 600,10</p>
+        <select class="dropdown">
+          <option>Kies een productgroep</option>
+          <option>Computers en computeronderdelen</option>
+          <option>Speelgoed</option>
+          <option>Telefoontoestellen</option>
+        </select>
+      </div>
+      <div class="berekentool-item">
+        <p class="berekentool-product">Samsung Galaxy S3</p>
+        <p class="berekentool-price">&euro; 12,99</p>
+        <select class="dropdown">
+          <option>Kies een productgroep</option>
+          <option>Computers en computeronderdelen</option>
+          <option>Speelgoed</option>
+          <option>Telefoontoestellen</option>
+        </select>
+      </div></div>
+    <!-- stap 2 -->
+    <div class="berekentool-content stap2">
+      <div class="berekentool-item">
+        <p class="berekentool-product">Samsung Galaxy S3</p>
+        <p class="berekentool-price">&euro; 12,99</p>
+        <div class="berekentool-detail">
+        <select class="dropdown">
+          <option>Kies een productgroep</option>
+          <option>Computers en computeronderdelen</option>
+          <option>Speelgoed</option>
+          <option>Telefoontoestellen</option>
+        </select>
+        
+          <p class="productprice left">Productprijst</p>
+          <p class="productprice_price right">&euro; 150,00</p>
+          <p class="btw left">BTW 21%</p>
+          <p class="btw_price right">&euro; 32,55</p>
+          <p class="invoerkosten left">Productprijst</p>
+          <p class="invoerkosten_price right">&euro; 150,00</p>
+        </div>
+      </div>
+
+      <div class="berekentool-item">
+        <p class="berekentool-product">Samsung Galaxy S3</p>
+        <p class="berekentool-price">&euro; 12,99</p>
+        <div class="berekentool-detail ">
+        <select class="dropdown">
+          <option>Kies een productgroep</option>
+          <option>Computers en computeronderdelen</option>
+          <option>Speelgoed</option>
+          <option>Telefoontoestellen</option>
+        </select>
+        <!-- <div class="berekentool-detail"> -->
+          <p class="productprice left">Productprijst</p>
+          <p class="productprice_price right">&euro; 150,00</p>
+          <p class="btw left">BTW 21%</p>
+          <p class="btw_price right">&euro; 32,55</p>
+          <p class="invoerkosten left">Productprijst</p>
+          <p class="invoerkosten_price right">&euro; 150,00</p>
+        </div>
+      </div>
+
+      <div class="berekentool-item">
+        <p class="berekentool-product">Samsung Galaxy S3</p>
+        <p class="berekentool-price">&euro; 12,99</p>
+        <div class="berekentool-detail">
+        <select class="dropdown">
+          <option>Kies een productgroep</option>
+          <option>Computers en computeronderdelen</option>
+          <option>Speelgoed</option>
+          <option>Telefoontoestellen</option>
+        </select>
+          <p class="productprice left">Productprijst</p>
+          <p class="productprice_price right">&euro; 150,00</p>
+          <p class="btw left">BTW 21%</p>
+          <p class="btw_price right">&euro; 32,55</p>
+          <p class="invoerkosten left">Productprijst</p>
+          <p class="invoerkosten_price right">&euro; 150,00</p>
+        </div>
+      </div></div>
+    <div class="btn" id="more-info">Bereken</div> 
+  </div>
 
 </body>
 </html>

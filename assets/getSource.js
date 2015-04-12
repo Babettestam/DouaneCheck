@@ -1,5 +1,7 @@
 // Defined variables
 
+var wordsToDetect = 3;
+
 var webshop_words = [
   "webshop",
   "web-shop",
@@ -16,6 +18,7 @@ var webshop_words = [
   "shopping carts",
   "shopping basket",
   "shopping baskets",
+  "add to cart",
   "shoppingbasket",
   "shoppingbaskets",
   "shopping-basket",
@@ -24,17 +27,31 @@ var webshop_words = [
   "web-winkel",
   "online shopping",
   "free shipping",
-  "buy cheap"
+  "buy cheap",
+  "korting",
+  "discount",
+  "aanbieding",
+  "aanbiedingen",
+  "retour sturen",
+  "afrekenen",
+  "delivery time",
+  "payment methods",
+  "my order(s)",
+  "my order",
+  "my orders",
+  "coupon code",
+  "voucher code",
+  "remove from cart",
+  "check availability",
+  "check out",
+  "check-out"
 ];
 
-var wordsToDetect = 2;
-
+// 
+// Request source of current page
+// 
 
 $(document).on('ready', function() {
-  // 
-  // Request source of current page
-  // 
-
   chrome.tabs.executeScript(
     { 
       code: "document.getElementsByTagName('html')[0].innerHTML;"
@@ -51,6 +68,7 @@ $(document).on('ready', function() {
 
 function readPage( source ) {
   if( source ) {
+
     var countSuccess = 0;
     var counter = 0;
 
@@ -63,7 +81,7 @@ function readPage( source ) {
         webshopDetected();
         return;
       }
-      if (counter == webshop_words.length && countSuccess < wordsToDetect) {
+      if( counter == webshop_words.length && countSuccess < wordsToDetect ) {
         noWebshop();
       }
     });

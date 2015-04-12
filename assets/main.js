@@ -28,7 +28,7 @@ $(window).on('load', function() {
       $('#outside-eu').addClass("hide");
       $('#inside-eu').removeClass("hide");
       $('.calculator-overlay').removeClass("hide");
-      $('.berekentool .title').html("Geen toeslagen");
+      $('.berekentool .title').html("Geen extra toeslagen");
     } else {
       // Outside eu
       $('#outside-eu').removeClass("hide");

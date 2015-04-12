@@ -4,6 +4,7 @@ Colors:
 
 blue -> #2a6a7c
 light grey back -> e1e2e9
+yellow -> E7D511
 */
 
 * {
@@ -34,14 +35,16 @@ section{
 
 .btn {
   padding: 8px 20px;
-  background: #2a6a7c;
+  background-color:#06845f;
   color: #fff;
+  width:265px;
   display: inline-block;
   cursor: pointer;
+  margin:10px;
 }
 
 .btn:hover {
-  
+  background-color:#056649;
 }
 
 .page {
@@ -89,7 +92,7 @@ section{
   left: 20px;
   top: 11px;
 }
-.header h1, .header h2 {
+.header h1, .header h2, .header p {
   font-size: 18px;
   color: #2a6a7c;
   font-weight: normal;
@@ -100,6 +103,10 @@ section{
 }
 .header h2 {
   font-size: 16px;
+}
+.header p{
+  position:relative;
+  left: 60px;
 }
 .icon-wrapper {
   background: #2a6a7c;
@@ -283,6 +290,9 @@ section{
 .page-inner {
   padding: 10px;
   background: #e5e5e5;
+  color: #2a6a7c;
+  font-size: 14px;
+  text-align: left;
 }
 
 #give-review {
@@ -301,6 +311,113 @@ section{
 
 
 
+/*
+    Rating
+*/
 
-/*  /NEW  */
+#vote {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+#vote span{
+  color: gray;
+  font-size: 25px;
+  cursor: pointer;
+  letter-spacing: 0;
+  margin-left: -2px;
+  margin-right: -2px;
+}
+#vote > span:hover,
+#vote > span:hover ~ span,
+#vote > span.active,
+#vote > span.active ~ span {
+  color: #E7D511;
+}
+
+
+
+
+/* 
+    Berekentool-page
+*/
+
+.berekentool-content{
+  background-color:#e5e5e5;
+  padding:0px 0px;
+}
+.berekentool-item{
+  color:#2a6a7c;
+  cursor:pointer;
+}
+.berekentool-content .close .berekentool-detail{
+  display:none !important;
+}
+.berekentool-content .close{
+  background-color:#d1d1d1;
+}
+.berekentool-product{
+  text-align:left;
+  display:inline-block;
+  width:180px;
+}
+.berekentool-product:after{
+  content: '';
+  position: relative;
+  top: -2px;
+  left: 5px;
+}
+.stap1{
+  padding-bottom:20px
+}
+.berekentool-price{
+  display:inline-block;
+  text-align:right;
+  width:80px;
+}
+.berekentool-price::after {
+  content: '^';
+  position: relative;
+  top: -1px;
+  font-size: 10px;
+  left: 5px;
+}
+.dropdown{
+  width:265px;
+  display:block;
+  margin-left:18px;
+  margin-top:-10px;
+}
+#berekentool-page .btn
+{
+  margin:10px;
+  width:265px;
+  background-color:#06845f;
+}
+#berekentool-page .btn:hover{
+  background-color:#056649;
+}
+.berekentool-detail{
+  margin-top:3px;
+  padding:5px 0;
+}
+.berekentool-detail p{
+  font-size:11px;
+  margin:3px 0;
+}
+.berekentool-detail .left{
+  display:inline-block;
+  text-align:left;
+  width:175px;
+}
+.berekentool-detail .right{
+  display:inline-block;
+  text-align:right;
+  width:60px;
+}
+
+
+
+
+
+
 
