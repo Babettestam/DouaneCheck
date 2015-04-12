@@ -25,8 +25,24 @@ $(document).ready( function() {
     slideToPage($('#page'));
   });
 
+  $('.settings').on ('click', function() {
+    slideToPage($('#info-detail'));
+  });
+
   $('#more-info').on ('click', function() {
     chrome.tabs.create({url: 'http://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/campagnes/landingspaginas/prive/internetaankopen/internetaankopen', selected: true});
+  }); 
+
+  $('.www').on ('click', function() {
+    chrome.tabs.create({url: 'http://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/campagnes/landingspaginas/prive/internetaankopen/internetaankopen', selected: true});
+  });
+
+  $('.twitter').on ('click', function() {
+    chrome.tabs.create({url: 'https://twitter.com/douane', selected: true});
+  });
+
+  $('.facebook').on ('click', function() {
+    chrome.tabs.create({url: 'https://www.facebook.com/douane', selected: true});
   });
 });
 

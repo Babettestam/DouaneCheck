@@ -122,7 +122,7 @@ function getReviews (url) {
 }
 function fillReview (wrapper, title, webshop, stars, comment, author, date) {
   $(wrapper + " .review_title").html( title );
-  $(wrapper + " .stars").html( stars );
+  $(wrapper + " #stars").html( stars );
   $(wrapper + " .review_content").html( comment );
   $(wrapper + " .author").html( author );
   $(wrapper + " .date").html( date );

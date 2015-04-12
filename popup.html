@@ -68,7 +68,7 @@
       <div class="footer">
         <div class="settings">
           <img src="images/settings.png">
-          <span>Instellingen</span>
+          <span>Informatie</span>
         </div>
         <div class="switch">
           <img src="images/pauze.png">
@@ -123,9 +123,9 @@
 
         <label for="comment">Beoordeling:</label>
         <textarea type='text' name='comment' id='comment'></textarea>
-        <input type="submit" class="btn" id="submit" value="Plaats beoordeling">
       </form>
     </div>
+      <input type="submit" class="btn" id="submit" value="Plaats beoordeling">
 
   </div>
 
@@ -139,7 +139,6 @@
       <h2><span id="average"></span>/5<span id="url"></span></h2>
     </section>
 
-    <div class="page-inner">
       <div class="reviews-wrapper">
         <div class="review" id="review1">
           <div class="title-wrapper">
@@ -159,11 +158,12 @@
             <span class="author"></span><span class="date"></span>
           </div>
         </div>
-      </div>
       <input type="submit" class="btn to-give-review" value="Plaats beoordeling">
     </div>
   </div>
+
   <!-- Review succes -->
+
 
   <div id="review-succes" class="page">
     <section class="header">
@@ -172,16 +172,52 @@
     </section>
 
     <div class="page-inner">
-      <img src="images/pauze.png">
+      <img src="images/succes-icon.png">
       <div>Beoordeling succesvol geplaatst</div>
       <input type="button" class="btn to-home-screen" value="TERUG NAAR BEGINSCHERM"/>
     </div>
 
   </div>
-<!-- /NEW -->
+
+  <!-- Info -->
+
+  <div id="info-detail" class="page">
+    <section class="header">
+      <img src="images/back.png" class="back-icon">
+      <h2>Beoordelen</h2>
+    </section>
+
+    <div class="page-inner">
+      <p>
+        <b>Berekentool</b><br>
+        De extensie maakt voor u een berekening zodat u overzichtelijk kunt zien wat u bij moet betalen bij een aankoop buiten de EU. U kunt vervolgens contact opnemen met de koeriersdienst die de invoer regelt. 
+      </p>
+      <p>
+        <b>Binnen of buiten EU</b><br>
+        Met de extensie kunt u zien of u zich in een webshop bevindt (binnen of buiten de EU). Er geldt namelijk een andere regelgeving binnen/buiten de EU.
+      </p>
+      <p>
+        <b>Beoordelingen</b><br>
+        De extensie geeft je de mogelijkheid om beoordelingen van de webshop(s) te bekijken en te plaatsen.
+      </p>
+    </div>
+    <div class="info-bottom">
+      <div class="www">
+        www.
+      </div>
+      <div class="facebook">
+        <img src="images/facebook.png">
+      </div>
+      <div class="twitter">
+        <img src="images/twitter.png">
+      </div>
+    </div>
+  </div>
 
 
   <!-- Berekentool page -->
+
+
   <div id="berekentool-page" class="page">
     <section class="header">
       <img src="images/back.png" class="back-icon">
@@ -191,47 +227,23 @@
    <!-- stap 1 -->
     <div class="berekentool-content stap1">
       <div class="berekentool-item">
-        <p class="berekentool-product">IPhone 6</p>
-        <p class="berekentool-price">&euro; 799,02</p>
+        <input class="berekentool-product" type="text" value="Product Name"></input>
+        <input class="berekentool-price" type="text" value="Price"></input>
         <select class="dropdown">
-          <option>Kies een productgroep</option>
-          <option>Computers en computeronderdelen</option>
-          <option>Speelgoed</option>
-          <option>Telefoontoestellen</option>
+          <option value="Geen Category">Kies een productgroep</option>
+          <option value="Computers en computeronderdelen">Computers en computeronderdelen</option>
+          <option value="Speelgoed">Speelgoed</option>
+          <option value="Telefoontoestellen">Telefoontoestellen</option>
         </select>
       </div>
-      <div class="berekentool-item">
-        <p class="berekentool-product">HTC One M8</p>
-        <p class="berekentool-price">&euro; 600,10</p>
-        <select class="dropdown">
-          <option>Kies een productgroep</option>
-          <option>Computers en computeronderdelen</option>
-          <option>Speelgoed</option>
-          <option>Telefoontoestellen</option>
-        </select>
-      </div>
-      <div class="berekentool-item">
-        <p class="berekentool-product">Samsung Galaxy S3</p>
-        <p class="berekentool-price">&euro; 12,99</p>
-        <select class="dropdown">
-          <option>Kies een productgroep</option>
-          <option>Computers en computeronderdelen</option>
-          <option>Speelgoed</option>
-          <option>Telefoontoestellen</option>
-        </select>
-      </div></div>
+    </div>
     <!-- stap 2 -->
     <div class="berekentool-content stap2">
       <div class="berekentool-item">
-        <p class="berekentool-product">Samsung Galaxy S3</p>
-        <p class="berekentool-price">&euro; 12,99</p>
+        <p class="berekentool-product">Product Naam</p>
+        <p class="berekentool-price">&euro;<span>Price</span></p>
         <div class="berekentool-detail">
-        <select class="dropdown">
-          <option>Kies een productgroep</option>
-          <option>Computers en computeronderdelen</option>
-          <option>Speelgoed</option>
-          <option>Telefoontoestellen</option>
-        </select>
+        <div class="berekentool-category"></div>
         
           <p class="productprice left">Productprijst</p>
           <p class="productprice_price right">&euro; 150,00</p>
@@ -239,47 +251,11 @@
           <p class="btw_price right">&euro; 32,55</p>
           <p class="invoerkosten left">Productprijst</p>
           <p class="invoerkosten_price right">&euro; 150,00</p>
+          <p class="toeslag left">Toeslag <span></span></p>
+          <p class="toeslag_price right">&euro; <span></span></p>
         </div>
       </div>
-
-      <div class="berekentool-item">
-        <p class="berekentool-product">Samsung Galaxy S3</p>
-        <p class="berekentool-price">&euro; 12,99</p>
-        <div class="berekentool-detail ">
-        <select class="dropdown">
-          <option>Kies een productgroep</option>
-          <option>Computers en computeronderdelen</option>
-          <option>Speelgoed</option>
-          <option>Telefoontoestellen</option>
-        </select>
-        <!-- <div class="berekentool-detail"> -->
-          <p class="productprice left">Productprijst</p>
-          <p class="productprice_price right">&euro; 150,00</p>
-          <p class="btw left">BTW 21%</p>
-          <p class="btw_price right">&euro; 32,55</p>
-          <p class="invoerkosten left">Productprijst</p>
-          <p class="invoerkosten_price right">&euro; 150,00</p>
-        </div>
-      </div>
-
-      <div class="berekentool-item">
-        <p class="berekentool-product">Samsung Galaxy S3</p>
-        <p class="berekentool-price">&euro; 12,99</p>
-        <div class="berekentool-detail">
-        <select class="dropdown">
-          <option>Kies een productgroep</option>
-          <option>Computers en computeronderdelen</option>
-          <option>Speelgoed</option>
-          <option>Telefoontoestellen</option>
-        </select>
-          <p class="productprice left">Productprijst</p>
-          <p class="productprice_price right">&euro; 150,00</p>
-          <p class="btw left">BTW 21%</p>
-          <p class="btw_price right">&euro; 32,55</p>
-          <p class="invoerkosten left">Productprijst</p>
-          <p class="invoerkosten_price right">&euro; 150,00</p>
-        </div>
-      </div></div>
+    </div>
     <div class="btn" id="more-info">Bereken</div> 
   </div>
 
